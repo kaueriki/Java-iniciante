@@ -1,3 +1,5 @@
+package br.com.alura.screenmatch.principal;
+
 import br.com.alura.screenmatch.calculos.CalculadoraDeTempo;
 import br.com.alura.screenmatch.calculos.FiltroRecomendacao;
 import br.com.alura.screenmatch.modelos.Episodio;
@@ -38,7 +40,7 @@ public class Principal {
         calculadora.inclui(lost);
         System.out.println(calculadora.getTempoTotal());
 
-        FiltroRecomendacao filtro= new FiltroRecomendacao();
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
         filtro.filtra(meuFilme);
 
         Episodio episodio = new Episodio();
@@ -47,19 +49,17 @@ public class Principal {
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 
-        Filme filmeDoPaulo = new Filme("Velozes e furiosos",2020);
-        filmeDoPaulo.setDuracaoEmMinutos(165);
-        filmeDoPaulo.avalia(9);
+        var filmeDoPaulo = new Filme("Dogville", 2003);
+        filmeDoPaulo.setDuracaoEmMinutos(200);
+        filmeDoPaulo.avalia(10);
 
         ArrayList<Filme> listaDeFilmes = new ArrayList<>();
         listaDeFilmes.add(filmeDoPaulo);
         listaDeFilmes.add(meuFilme);
         listaDeFilmes.add(outroFilme);
-        System.out.println("Tamanho da lista: " + listaDeFilmes.size());
-        System.out.println("Primeiro filme:  "+ listaDeFilmes.get(0).getNome());
+        System.out.println("Tamanho da lista " + listaDeFilmes.size());
+        System.out.println("Primeiro filme " + listaDeFilmes.get(0).getNome());
         System.out.println(listaDeFilmes);
-        System.out.println("toString filme:  "+ listaDeFilmes.get(0).toString());
-
-
+        System.out.println("toString do filme " + listaDeFilmes.get(0).toString());
     }
 }
